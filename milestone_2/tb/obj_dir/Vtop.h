@@ -29,8 +29,8 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_IN8(&i_rst_n,0,0);
     VL_IN8(&i_io_btn,3,0);
     VL_OUT8(&o_insn_vld,0,0);
-    VL_IN8(&__pinNumber9,0,0);
     VL_IN(&i_io_sw,31,0);
+    VL_OUT(&o_pc_debug,31,0);
     VL_OUT(&o_io_lcd,31,0);
     VL_OUT(&o_io_ledg,31,0);
     VL_OUT(&o_io_ledr,31,0);

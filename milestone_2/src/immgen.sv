@@ -17,10 +17,11 @@ always_comb begin
             else
                 imm = {{20{instr[31]}}, instr[31:20]};
         end
-        7'b0100011: //S-type
+        7'b0100011: //S-type    
             imm = {{20{instr[31]}}, instr[31:25], instr[11:7]};
         7'b1100011: //B-type
-            imm = {{20{instr[31]}}, instr[31:25], instr[11:7]};
+            //imm = {{20{instr[31]}}, instr[31:25], instr[11:7]};
+            imm = {{20{instr[31]}}, instr[7], instr[30:25], instr[11:8], 1'b0}; 
         7'b0110111: //LUI-type
             imm = {instr[31:12], 12'b0};
         7'b0010111: //AUIPC-type

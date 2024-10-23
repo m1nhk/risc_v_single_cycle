@@ -10,6 +10,48 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___sequent__TOP__0\n"); );
+    // Body
+    vlSelf->__Vdlyvset__top__DOT__singlecycle__DOT__lsu__DOT__data_mem__v0 = 0U;
+    vlSelf->__Vdly__top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg 
+        = vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg;
+    vlSelf->__Vdly__top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg 
+        = vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg;
+    vlSelf->__Vdly__top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg 
+        = vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg;
+    if (vlSelf->i_rst_n) {
+        if (vlSelf->top__DOT__singlecycle__DOT__mem_wren) {
+            if ((1U & (~ ((0x7000U <= vlSelf->top__DOT__singlecycle__DOT__alu_data) 
+                          & (0x700fU >= vlSelf->top__DOT__singlecycle__DOT__alu_data))))) {
+                if ((1U & (~ ((0x7010U <= vlSelf->top__DOT__singlecycle__DOT__alu_data) 
+                              & (0x701fU >= vlSelf->top__DOT__singlecycle__DOT__alu_data))))) {
+                    if ((1U & (~ ((0x7020U <= vlSelf->top__DOT__singlecycle__DOT__alu_data) 
+                                  & (0x703fU >= vlSelf->top__DOT__singlecycle__DOT__alu_data))))) {
+                        if ((0x2000U > vlSelf->top__DOT__singlecycle__DOT__alu_data)) {
+                            vlSelf->__Vdlyvval__top__DOT__singlecycle__DOT__lsu__DOT__data_mem__v0 
+                                = ((0U == (7U & (vlSelf->top__DOT__singlecycle__DOT__instr 
+                                                 >> 0xcU)))
+                                    ? (0xffU & vlSelf->top__DOT__singlecycle__DOT__rs2_data)
+                                    : ((1U == (7U & 
+                                               (vlSelf->top__DOT__singlecycle__DOT__instr 
+                                                >> 0xcU)))
+                                        ? (0xffffU 
+                                           & vlSelf->top__DOT__singlecycle__DOT__rs2_data)
+                                        : vlSelf->top__DOT__singlecycle__DOT__rs2_data));
+                            vlSelf->__Vdlyvset__top__DOT__singlecycle__DOT__lsu__DOT__data_mem__v0 = 1U;
+                            vlSelf->__Vdlyvdim0__top__DOT__singlecycle__DOT__lsu__DOT__data_mem__v0 
+                                = (0x1fffU & vlSelf->top__DOT__singlecycle__DOT__alu_data);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+VL_INLINE_OPT void Vtop___024root___sequent__TOP__1(Vtop___024root* vlSelf) {
+    if (false && vlSelf) {}  // Prevent unused
+    Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___sequent__TOP__1\n"); );
     // Init
     CData/*4:0*/ __Vdlyvdim0__top__DOT__singlecycle__DOT__regfile__DOT__register__v0;
     IData/*31:0*/ __Vdlyvval__top__DOT__singlecycle__DOT__regfile__DOT__register__v0;
@@ -33,53 +75,10 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
                 = (0x1fU & (vlSelf->top__DOT__singlecycle__DOT__instr 
                             >> 7U));
         }
-        if ((1U & (~ (IData)(vlSelf->top__DOT__singlecycle__DOT__mem_wren)))) {
-            vlSelf->top__DOT__singlecycle__DOT__ld_data 
-                = ((0x7810U == vlSelf->top__DOT__singlecycle__DOT__alu_data)
-                    ? (IData)(vlSelf->i_io_btn) : (
-                                                   (0x7800U 
-                                                    == vlSelf->top__DOT__singlecycle__DOT__alu_data)
-                                                    ? vlSelf->i_io_sw
-                                                    : 
-                                                   ((0x7000U 
-                                                     == vlSelf->top__DOT__singlecycle__DOT__alu_data)
-                                                     ? vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg
-                                                     : 
-                                                    ((0x7010U 
-                                                      == vlSelf->top__DOT__singlecycle__DOT__alu_data)
-                                                      ? vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg
-                                                      : 
-                                                     ((0x7030U 
-                                                       == vlSelf->top__DOT__singlecycle__DOT__alu_data)
-                                                       ? vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg
-                                                       : 0U)))));
-        }
         vlSelf->top__DOT__singlecycle__DOT__pc = vlSelf->top__DOT__singlecycle__DOT__pc_next;
-        if (vlSelf->top__DOT__singlecycle__DOT__mem_wren) {
-            if ((0x7000U == vlSelf->top__DOT__singlecycle__DOT__alu_data)) {
-                vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg 
-                    = vlSelf->top__DOT__singlecycle__DOT__rs2_data;
-            }
-            if ((0x7000U != vlSelf->top__DOT__singlecycle__DOT__alu_data)) {
-                if ((0x7010U == vlSelf->top__DOT__singlecycle__DOT__alu_data)) {
-                    vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg 
-                        = vlSelf->top__DOT__singlecycle__DOT__rs2_data;
-                }
-                if ((0x7010U != vlSelf->top__DOT__singlecycle__DOT__alu_data)) {
-                    if ((0x7030U == vlSelf->top__DOT__singlecycle__DOT__alu_data)) {
-                        vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg 
-                            = vlSelf->top__DOT__singlecycle__DOT__rs2_data;
-                    }
-                }
-            }
-        }
     } else {
         __Vdlyvset__top__DOT__singlecycle__DOT__regfile__DOT__register__v1 = 1U;
-        vlSelf->top__DOT__singlecycle__DOT__ld_data = 0U;
         vlSelf->top__DOT__singlecycle__DOT__pc = 0U;
-        vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg = 0U;
-        vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg = 0U;
-        vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg = 0U;
     }
     if (__Vdlyvset__top__DOT__singlecycle__DOT__regfile__DOT__register__v0) {
         vlSelf->top__DOT__singlecycle__DOT__regfile__DOT__register[__Vdlyvdim0__top__DOT__singlecycle__DOT__regfile__DOT__register__v0] 
@@ -119,6 +118,338 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
         vlSelf->top__DOT__singlecycle__DOT__regfile__DOT__register[0x1eU] = 0U;
         vlSelf->top__DOT__singlecycle__DOT__regfile__DOT__register[0x1fU] = 0U;
     }
+    vlSelf->o_pc_debug = vlSelf->top__DOT__singlecycle__DOT__pc;
+}
+
+VL_INLINE_OPT void Vtop___024root___sequent__TOP__2(Vtop___024root* vlSelf) {
+    if (false && vlSelf) {}  // Prevent unused
+    Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___sequent__TOP__2\n"); );
+    // Body
+    if (vlSelf->i_rst_n) {
+        if (vlSelf->top__DOT__singlecycle__DOT__mem_wren) {
+            if (((0x7000U <= vlSelf->top__DOT__singlecycle__DOT__alu_data) 
+                 & (0x700fU >= vlSelf->top__DOT__singlecycle__DOT__alu_data))) {
+                vlSelf->__Vdly__top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg 
+                    = ((0U == (7U & (vlSelf->top__DOT__singlecycle__DOT__instr 
+                                     >> 0xcU))) ? (0xffU 
+                                                   & vlSelf->top__DOT__singlecycle__DOT__rs2_data)
+                        : ((1U == (7U & (vlSelf->top__DOT__singlecycle__DOT__instr 
+                                         >> 0xcU)))
+                            ? (0xffffU & vlSelf->top__DOT__singlecycle__DOT__rs2_data)
+                            : ((2U == (7U & (vlSelf->top__DOT__singlecycle__DOT__instr 
+                                             >> 0xcU)))
+                                ? vlSelf->top__DOT__singlecycle__DOT__rs2_data
+                                : vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg)));
+            } else if (((0x7010U <= vlSelf->top__DOT__singlecycle__DOT__alu_data) 
+                        & (0x701fU >= vlSelf->top__DOT__singlecycle__DOT__alu_data))) {
+                vlSelf->__Vdly__top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg 
+                    = ((0U == (7U & (vlSelf->top__DOT__singlecycle__DOT__instr 
+                                     >> 0xcU))) ? (0xffU 
+                                                   & vlSelf->top__DOT__singlecycle__DOT__rs2_data)
+                        : ((1U == (7U & (vlSelf->top__DOT__singlecycle__DOT__instr 
+                                         >> 0xcU)))
+                            ? (0xffffU & vlSelf->top__DOT__singlecycle__DOT__rs2_data)
+                            : ((2U == (7U & (vlSelf->top__DOT__singlecycle__DOT__instr 
+                                             >> 0xcU)))
+                                ? vlSelf->top__DOT__singlecycle__DOT__rs2_data
+                                : vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg)));
+            } else if (((0x7020U <= vlSelf->top__DOT__singlecycle__DOT__alu_data) 
+                        & (0x703fU >= vlSelf->top__DOT__singlecycle__DOT__alu_data))) {
+                vlSelf->__Vdly__top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg 
+                    = ((0U == (7U & (vlSelf->top__DOT__singlecycle__DOT__instr 
+                                     >> 0xcU))) ? (0xffU 
+                                                   & vlSelf->top__DOT__singlecycle__DOT__rs2_data)
+                        : ((1U == (7U & (vlSelf->top__DOT__singlecycle__DOT__instr 
+                                         >> 0xcU)))
+                            ? (0xffffU & vlSelf->top__DOT__singlecycle__DOT__rs2_data)
+                            : ((2U == (7U & (vlSelf->top__DOT__singlecycle__DOT__instr 
+                                             >> 0xcU)))
+                                ? vlSelf->top__DOT__singlecycle__DOT__rs2_data
+                                : vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg)));
+            }
+        } else {
+            vlSelf->top__DOT__singlecycle__DOT__ld_data 
+                = (((0x7800U <= vlSelf->top__DOT__singlecycle__DOT__alu_data) 
+                    & (0x780fU >= vlSelf->top__DOT__singlecycle__DOT__alu_data))
+                    ? (IData)(vlSelf->i_io_btn) : (
+                                                   ((0x7100U 
+                                                     <= vlSelf->top__DOT__singlecycle__DOT__alu_data) 
+                                                    & (0x71ffU 
+                                                       >= vlSelf->top__DOT__singlecycle__DOT__alu_data))
+                                                    ? 
+                                                   ((0x4000U 
+                                                     & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                     ? 
+                                                    ((0x2000U 
+                                                      & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                      ? 0U
+                                                      : 
+                                                     ((0x1000U 
+                                                       & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                       ? 
+                                                      (0xffffU 
+                                                       & vlSelf->i_io_sw)
+                                                       : 
+                                                      (0xffU 
+                                                       & vlSelf->i_io_sw)))
+                                                     : 
+                                                    ((0x2000U 
+                                                      & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                      ? 
+                                                     ((0x1000U 
+                                                       & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                       ? 0U
+                                                       : vlSelf->i_io_sw)
+                                                      : 
+                                                     ((0x1000U 
+                                                       & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                       ? 
+                                                      (((- (IData)(
+                                                                   (1U 
+                                                                    & (vlSelf->i_io_sw 
+                                                                       >> 0xfU)))) 
+                                                        << 0x10U) 
+                                                       | (0xffffU 
+                                                          & vlSelf->i_io_sw))
+                                                       : 
+                                                      (((- (IData)(
+                                                                   (1U 
+                                                                    & (vlSelf->i_io_sw 
+                                                                       >> 7U)))) 
+                                                        << 8U) 
+                                                       | (0xffU 
+                                                          & vlSelf->i_io_sw)))))
+                                                    : 
+                                                   (((0x7000U 
+                                                      <= vlSelf->top__DOT__singlecycle__DOT__alu_data) 
+                                                     & (0x700fU 
+                                                        >= vlSelf->top__DOT__singlecycle__DOT__alu_data))
+                                                     ? 
+                                                    ((0x4000U 
+                                                      & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                      ? 
+                                                     ((0x2000U 
+                                                       & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                       ? 0U
+                                                       : 
+                                                      ((0x1000U 
+                                                        & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                        ? 
+                                                       (0xffffU 
+                                                        & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg)
+                                                        : 
+                                                       (0xffU 
+                                                        & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg)))
+                                                      : 
+                                                     ((0x2000U 
+                                                       & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                       ? 
+                                                      ((0x1000U 
+                                                        & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                        ? 0U
+                                                        : vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg)
+                                                       : 
+                                                      ((0x1000U 
+                                                        & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                        ? 
+                                                       (((- (IData)(
+                                                                    (1U 
+                                                                     & (vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg 
+                                                                        >> 0xfU)))) 
+                                                         << 0x10U) 
+                                                        | (0xffffU 
+                                                           & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg))
+                                                        : 
+                                                       (((- (IData)(
+                                                                    (1U 
+                                                                     & (vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg 
+                                                                        >> 7U)))) 
+                                                         << 8U) 
+                                                        | (0xffU 
+                                                           & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg)))))
+                                                     : 
+                                                    (((0x7010U 
+                                                       <= vlSelf->top__DOT__singlecycle__DOT__alu_data) 
+                                                      & (0x701fU 
+                                                         >= vlSelf->top__DOT__singlecycle__DOT__alu_data))
+                                                      ? 
+                                                     ((0x4000U 
+                                                       & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                       ? 
+                                                      ((0x2000U 
+                                                        & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                        ? 0U
+                                                        : 
+                                                       ((0x1000U 
+                                                         & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                         ? 
+                                                        (0xffffU 
+                                                         & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg)
+                                                         : 
+                                                        (0xffU 
+                                                         & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg)))
+                                                       : 
+                                                      ((0x2000U 
+                                                        & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                        ? 
+                                                       ((0x1000U 
+                                                         & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                         ? 0U
+                                                         : vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg)
+                                                        : 
+                                                       ((0x1000U 
+                                                         & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                         ? 
+                                                        (((- (IData)(
+                                                                     (1U 
+                                                                      & (vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg 
+                                                                         >> 0xfU)))) 
+                                                          << 0x10U) 
+                                                         | (0xffffU 
+                                                            & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg))
+                                                         : 
+                                                        (((- (IData)(
+                                                                     (1U 
+                                                                      & (vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg 
+                                                                         >> 7U)))) 
+                                                          << 8U) 
+                                                         | (0xffU 
+                                                            & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg)))))
+                                                      : 
+                                                     (((0x7020U 
+                                                        <= vlSelf->top__DOT__singlecycle__DOT__alu_data) 
+                                                       & (0x703fU 
+                                                          >= vlSelf->top__DOT__singlecycle__DOT__alu_data))
+                                                       ? 
+                                                      ((0x4000U 
+                                                        & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                        ? 
+                                                       ((0x2000U 
+                                                         & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                         ? 0U
+                                                         : 
+                                                        ((0x1000U 
+                                                          & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                          ? 
+                                                         (0xffffU 
+                                                          & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg)
+                                                          : 
+                                                         (0xffU 
+                                                          & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg)))
+                                                        : 
+                                                       ((0x2000U 
+                                                         & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                         ? 
+                                                        ((0x1000U 
+                                                          & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                          ? 0U
+                                                          : vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg)
+                                                         : 
+                                                        ((0x1000U 
+                                                          & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                          ? 
+                                                         (((- (IData)(
+                                                                      (1U 
+                                                                       & (vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg 
+                                                                          >> 0xfU)))) 
+                                                           << 0x10U) 
+                                                          | (0xffffU 
+                                                             & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg))
+                                                          : 
+                                                         (((- (IData)(
+                                                                      (1U 
+                                                                       & (vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg 
+                                                                          >> 7U)))) 
+                                                           << 8U) 
+                                                          | (0xffU 
+                                                             & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg)))))
+                                                       : 
+                                                      ((0x2000U 
+                                                        > vlSelf->top__DOT__singlecycle__DOT__alu_data)
+                                                        ? 
+                                                       ((0x4000U 
+                                                         & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                         ? 
+                                                        ((0x2000U 
+                                                          & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                          ? 0U
+                                                          : 
+                                                         ((0x1000U 
+                                                           & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                           ? 
+                                                          (0xffffU 
+                                                           & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__data_mem
+                                                           [
+                                                           (0x1fffU 
+                                                            & vlSelf->top__DOT__singlecycle__DOT__alu_data)])
+                                                           : 
+                                                          (0xffU 
+                                                           & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__data_mem
+                                                           [
+                                                           (0x1fffU 
+                                                            & vlSelf->top__DOT__singlecycle__DOT__alu_data)])))
+                                                         : 
+                                                        ((0x2000U 
+                                                          & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                          ? 
+                                                         ((0x1000U 
+                                                           & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                           ? 0U
+                                                           : 
+                                                          vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__data_mem
+                                                          [
+                                                          (0x1fffU 
+                                                           & vlSelf->top__DOT__singlecycle__DOT__alu_data)])
+                                                          : 
+                                                         ((0x1000U 
+                                                           & vlSelf->top__DOT__singlecycle__DOT__instr)
+                                                           ? 
+                                                          (((- (IData)(
+                                                                       (1U 
+                                                                        & (vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__data_mem
+                                                                           [
+                                                                           (0x1fffU 
+                                                                            & vlSelf->top__DOT__singlecycle__DOT__alu_data)] 
+                                                                           >> 0xfU)))) 
+                                                            << 0x10U) 
+                                                           | (0xffffU 
+                                                              & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__data_mem
+                                                              [
+                                                              (0x1fffU 
+                                                               & vlSelf->top__DOT__singlecycle__DOT__alu_data)]))
+                                                           : 
+                                                          (((- (IData)(
+                                                                       (1U 
+                                                                        & (vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__data_mem
+                                                                           [
+                                                                           (0x1fffU 
+                                                                            & vlSelf->top__DOT__singlecycle__DOT__alu_data)] 
+                                                                           >> 7U)))) 
+                                                            << 8U) 
+                                                           | (0xffU 
+                                                              & vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__data_mem
+                                                              [
+                                                              (0x1fffU 
+                                                               & vlSelf->top__DOT__singlecycle__DOT__alu_data)])))))
+                                                        : 0U))))));
+        }
+    } else {
+        vlSelf->__Vdly__top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg = 0U;
+        vlSelf->__Vdly__top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg = 0U;
+        vlSelf->__Vdly__top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg = 0U;
+        vlSelf->top__DOT__singlecycle__DOT__ld_data = 0U;
+    }
+    if (vlSelf->__Vdlyvset__top__DOT__singlecycle__DOT__lsu__DOT__data_mem__v0) {
+        vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__data_mem[vlSelf->__Vdlyvdim0__top__DOT__singlecycle__DOT__lsu__DOT__data_mem__v0] 
+            = vlSelf->__Vdlyvval__top__DOT__singlecycle__DOT__lsu__DOT__data_mem__v0;
+    }
+    vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg 
+        = vlSelf->__Vdly__top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg;
+    vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg 
+        = vlSelf->__Vdly__top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg;
+    vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg 
+        = vlSelf->__Vdly__top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg;
     vlSelf->o_io_ledr = vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg;
     vlSelf->o_io_ledg = vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg;
     vlSelf->o_io_lcd = vlSelf->top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg;
@@ -327,12 +658,15 @@ VL_INLINE_OPT void Vtop___024root___combo__TOP__0(Vtop___024root* vlSelf) {
                         vlSelf->top__DOT__singlecycle__DOT__imm 
                             = (((- (IData)((vlSelf->top__DOT__singlecycle__DOT__instr 
                                             >> 0x1fU))) 
-                                << 0xcU) | ((0xfe0U 
+                                << 0xcU) | ((0x800U 
                                              & (vlSelf->top__DOT__singlecycle__DOT__instr 
-                                                >> 0x14U)) 
-                                            | (0x1fU 
-                                               & (vlSelf->top__DOT__singlecycle__DOT__instr 
-                                                  >> 7U))));
+                                                << 4U)) 
+                                            | ((0x7e0U 
+                                                & (vlSelf->top__DOT__singlecycle__DOT__instr 
+                                                   >> 0x14U)) 
+                                               | (0x1eU 
+                                                  & (vlSelf->top__DOT__singlecycle__DOT__instr 
+                                                     >> 7U)))));
                     } else {
                         vlSelf->top__DOT__singlecycle__DOT__br_un = 0U;
                         vlSelf->top__DOT__singlecycle__DOT__imm = 0U;
@@ -421,13 +755,20 @@ VL_INLINE_OPT void Vtop___024root___combo__TOP__0(Vtop___024root* vlSelf) {
                     vlSelf->top__DOT__singlecycle__DOT__br_un = 0U;
                     vlSelf->top__DOT__singlecycle__DOT__imm = 0U;
                 } else if ((4U & vlSelf->top__DOT__singlecycle__DOT__instr)) {
-                    vlSelf->top__DOT__singlecycle__DOT__alu_op = 0U;
+                    if ((2U & vlSelf->top__DOT__singlecycle__DOT__instr)) {
+                        if ((1U & vlSelf->top__DOT__singlecycle__DOT__instr)) {
+                            vlSelf->top__DOT__singlecycle__DOT__alu_op = 0xfU;
+                            vlSelf->top__DOT__singlecycle__DOT__imm 
+                                = (0xfffff000U & vlSelf->top__DOT__singlecycle__DOT__instr);
+                        } else {
+                            vlSelf->top__DOT__singlecycle__DOT__alu_op = 0U;
+                            vlSelf->top__DOT__singlecycle__DOT__imm = 0U;
+                        }
+                    } else {
+                        vlSelf->top__DOT__singlecycle__DOT__alu_op = 0U;
+                        vlSelf->top__DOT__singlecycle__DOT__imm = 0U;
+                    }
                     vlSelf->top__DOT__singlecycle__DOT__br_un = 0U;
-                    vlSelf->top__DOT__singlecycle__DOT__imm 
-                        = ((2U & vlSelf->top__DOT__singlecycle__DOT__instr)
-                            ? ((1U & vlSelf->top__DOT__singlecycle__DOT__instr)
-                                ? (0xfffff000U & vlSelf->top__DOT__singlecycle__DOT__instr)
-                                : 0U) : 0U);
                 } else {
                     if ((2U & vlSelf->top__DOT__singlecycle__DOT__instr)) {
                         if ((1U & vlSelf->top__DOT__singlecycle__DOT__instr)) {
@@ -1229,735 +1570,464 @@ VL_INLINE_OPT void Vtop___024root___combo__TOP__0(Vtop___024root* vlSelf) {
                                      >> 0x1fU)) << 0x1fU)) 
                              ^ (0x80000000U & (vlSelf->top__DOT__singlecycle__DOT__brc__DOT__full_adder_unsigned__DOT__c 
                                                << 1U)))));
-    if (((((((((0U == vlSelf->top__DOT__singlecycle__DOT__operand_b) 
-               | (1U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-              | (2U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-             | (3U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-            | (4U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-           | (5U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-          | (6U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-         | (7U == vlSelf->top__DOT__singlecycle__DOT__operand_b))) {
-        if ((0U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = vlSelf->top__DOT__singlecycle__DOT__operand_a;
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = vlSelf->top__DOT__singlecycle__DOT__operand_a;
-        } else if ((1U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 1U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 1U);
-        } else if ((2U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 2U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 2U);
-        } else if ((3U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 3U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 3U);
-        } else if ((4U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 4U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 4U);
-        } else if ((5U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 5U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 5U);
-        } else if ((6U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 6U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 6U);
-        } else {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 7U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 7U);
-        }
-    } else if (((((((((8U == vlSelf->top__DOT__singlecycle__DOT__operand_b) 
-                      | (9U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                     | (0xaU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                    | (0xbU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                   | (0xcU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                  | (0xdU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                 | (0xeU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                | (0xfU == vlSelf->top__DOT__singlecycle__DOT__operand_b))) {
-        if ((8U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 8U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 8U);
-        } else if ((9U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 9U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 9U);
-        } else if ((0xaU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0xaU);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0xaU);
-        } else if ((0xbU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0xbU);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0xbU);
-        } else if ((0xcU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0xcU);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0xcU);
-        } else if ((0xdU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0xdU);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0xdU);
-        } else if ((0xeU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0xeU);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0xeU);
-        } else {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0xfU);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0xfU);
-        }
-    } else if (((((((((0x10U == vlSelf->top__DOT__singlecycle__DOT__operand_b) 
-                      | (0x11U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                     | (0x12U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                    | (0x13U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                   | (0x14U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                  | (0x15U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                 | (0x16U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                | (0x17U == vlSelf->top__DOT__singlecycle__DOT__operand_b))) {
-        if ((0x10U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0x10U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0x10U);
-        } else if ((0x11U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+    if ((0x10U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+        if ((8U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+            if ((4U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                if ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                    if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                        vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                            = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                               << 0x1fU);
+                        vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                            = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                               >> 0x1fU);
+                    } else {
+                        vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                            = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                               << 0x1eU);
+                        vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                            = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                               >> 0x1eU);
+                    }
+                } else if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           << 0x1dU);
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           >> 0x1dU);
+                } else {
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           << 0x1cU);
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           >> 0x1cU);
+                }
+            } else if ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           << 0x1bU);
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           >> 0x1bU);
+                } else {
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           << 0x1aU);
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           >> 0x1aU);
+                }
+            } else if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       << 0x19U);
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       >> 0x19U);
+            } else {
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       << 0x18U);
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       >> 0x18U);
+            }
+        } else if ((4U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+            if ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           << 0x17U);
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           >> 0x17U);
+                } else {
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           << 0x16U);
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           >> 0x16U);
+                }
+            } else if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       << 0x15U);
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       >> 0x15U);
+            } else {
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       << 0x14U);
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       >> 0x14U);
+            }
+        } else if ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+            if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       << 0x13U);
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       >> 0x13U);
+            } else {
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       << 0x12U);
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       >> 0x12U);
+            }
+        } else if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
             vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
                 = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
                    << 0x11U);
             vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
                 = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
                    >> 0x11U);
-        } else if ((0x12U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0x12U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0x12U);
-        } else if ((0x13U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0x13U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0x13U);
-        } else if ((0x14U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0x14U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0x14U);
-        } else if ((0x15U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0x15U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0x15U);
-        } else if ((0x16U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0x16U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0x16U);
         } else {
             vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
                 = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0x17U);
+                   << 0x10U);
             vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
                 = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0x17U);
+                   >> 0x10U);
         }
-    } else if (((((((((0x18U == vlSelf->top__DOT__singlecycle__DOT__operand_b) 
-                      | (0x19U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                     | (0x1aU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                    | (0x1bU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                   | (0x1cU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                  | (0x1dU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                 | (0x1eU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                | (0x1fU == vlSelf->top__DOT__singlecycle__DOT__operand_b))) {
-        if ((0x18U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+    } else if ((8U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+        if ((4U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+            if ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           << 0xfU);
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           >> 0xfU);
+                } else {
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           << 0xeU);
+                    vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                        = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                           >> 0xeU);
+                }
+            } else if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       << 0xdU);
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       >> 0xdU);
+            } else {
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       << 0xcU);
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       >> 0xcU);
+            }
+        } else if ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+            if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       << 0xbU);
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       >> 0xbU);
+            } else {
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       << 0xaU);
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       >> 0xaU);
+            }
+        } else if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
             vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
                 = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0x18U);
+                   << 9U);
             vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
                 = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0x18U);
-        } else if ((0x19U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0x19U);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0x19U);
-        } else if ((0x1aU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0x1aU);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0x1aU);
-        } else if ((0x1bU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0x1bU);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0x1bU);
-        } else if ((0x1cU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0x1cU);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0x1cU);
-        } else if ((0x1dU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0x1dU);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0x1dU);
-        } else if ((0x1eU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0x1eU);
-            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
-                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0x1eU);
+                   >> 9U);
         } else {
             vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
                 = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   << 0x1fU);
+                   << 8U);
             vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
                 = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                   >> 0x1fU);
+                   >> 8U);
         }
+    } else if ((4U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+        if ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+            if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       << 7U);
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       >> 7U);
+            } else {
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       << 6U);
+                vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                    = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                       >> 6U);
+            }
+        } else if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                   << 5U);
+            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                   >> 5U);
+        } else {
+            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                   << 4U);
+            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                   >> 4U);
+        }
+    } else if ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+        if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                   << 3U);
+            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                   >> 3U);
+        } else {
+            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                   << 2U);
+            vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+                = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                   >> 2U);
+        }
+    } else if ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)) {
+        vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+            = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+               << 1U);
+        vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+            = (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+               >> 1U);
     } else {
-        vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result = 0U;
-        vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result = 0U;
+        vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_left_result 
+            = vlSelf->top__DOT__singlecycle__DOT__operand_a;
+        vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result 
+            = vlSelf->top__DOT__singlecycle__DOT__operand_a;
     }
     vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_arithmetic_result 
         = ((vlSelf->top__DOT__singlecycle__DOT__operand_a 
-            >> 0x1fU) ? (((((((((0U == vlSelf->top__DOT__singlecycle__DOT__operand_b) 
-                                | (1U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                               | (2U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                              | (3U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                             | (4U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                            | (5U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                           | (6U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                          | (7U == vlSelf->top__DOT__singlecycle__DOT__operand_b))
-                          ? ((0U == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                              ? vlSelf->top__DOT__singlecycle__DOT__operand_a
-                              : ((1U == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                  ? (0x80000000U | 
-                                     (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                      >> 1U)) : ((2U 
-                                                  == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                  ? 
-                                                 (0xc0000000U 
-                                                  | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                     >> 2U))
-                                                  : 
-                                                 ((3U 
-                                                   == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                   ? 
-                                                  (0xe0000000U 
-                                                   | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                      >> 3U))
-                                                   : 
-                                                  ((4U 
-                                                    == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                    ? 
-                                                   (0xf0000000U 
-                                                    | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                       >> 4U))
-                                                    : 
-                                                   ((5U 
-                                                     == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                     ? 
-                                                    (0xf8000000U 
-                                                     | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                        >> 5U))
-                                                     : 
-                                                    ((6U 
-                                                      == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                      ? 
-                                                     (0xfc000000U 
-                                                      | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                         >> 6U))
-                                                      : 
-                                                     (0xfe000000U 
-                                                      | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                         >> 7U)))))))))
-                          : (((((((((8U == vlSelf->top__DOT__singlecycle__DOT__operand_b) 
-                                    | (9U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                   | (0xaU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                  | (0xbU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                 | (0xcU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                | (0xdU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                               | (0xeU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                              | (0xfU == vlSelf->top__DOT__singlecycle__DOT__operand_b))
-                              ? ((8U == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                  ? (0xff000000U | 
-                                     (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                      >> 8U)) : ((9U 
-                                                  == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                  ? 
-                                                 (0xff800000U 
-                                                  | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                     >> 9U))
-                                                  : 
-                                                 ((0xaU 
-                                                   == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                   ? 
-                                                  (0xffc00000U 
-                                                   | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                      >> 0xaU))
-                                                   : 
-                                                  ((0xbU 
-                                                    == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                    ? 
-                                                   (0xffe00000U 
-                                                    | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                       >> 0xbU))
-                                                    : 
-                                                   ((0xcU 
-                                                     == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                     ? 
-                                                    (0xfff00000U 
-                                                     | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                        >> 0xcU))
-                                                     : 
-                                                    ((0xdU 
-                                                      == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                      ? 
-                                                     (0xfff80000U 
-                                                      | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                         >> 0xdU))
-                                                      : 
-                                                     ((0xeU 
-                                                       == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                       ? 
-                                                      (0xfffc0000U 
-                                                       | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                          >> 0xeU))
-                                                       : 
-                                                      (0xfffe0000U 
-                                                       | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                          >> 0xfU)))))))))
-                              : (((((((((0x10U == vlSelf->top__DOT__singlecycle__DOT__operand_b) 
-                                        | (0x11U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                       | (0x12U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                      | (0x13U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                     | (0x14U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                    | (0x15U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                   | (0x16U == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                  | (0x17U == vlSelf->top__DOT__singlecycle__DOT__operand_b))
-                                  ? ((0x10U == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                      ? (0xffff0000U 
-                                         | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                            >> 0x10U))
-                                      : ((0x11U == vlSelf->top__DOT__singlecycle__DOT__operand_b)
+            >> 0x1fU) ? ((0x10U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                          ? ((8U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                              ? ((4U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                  ? ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                      ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                          ? (0xfffffffeU 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x1fU))
+                                          : (0xfffffffcU 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x1eU)))
+                                      : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                          ? (0xfffffff8U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x1dU))
+                                          : (0xfffffff0U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x1cU))))
+                                  : ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                      ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                          ? (0xffffffe0U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x1bU))
+                                          : (0xffffffc0U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x1aU)))
+                                      : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                          ? (0xffffff80U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x19U))
+                                          : (0xffffff00U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x18U)))))
+                              : ((4U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                  ? ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                      ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                          ? (0xfffffe00U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x17U))
+                                          : (0xfffffc00U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x16U)))
+                                      : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                          ? (0xfffff800U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x15U))
+                                          : (0xfffff000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x14U))))
+                                  : ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                      ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                          ? (0xffffe000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x13U))
+                                          : (0xffffc000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x12U)))
+                                      : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
                                           ? (0xffff8000U 
                                              | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
                                                 >> 0x11U))
-                                          : ((0x12U 
-                                              == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                              ? (0xffffc000U 
-                                                 | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                    >> 0x12U))
-                                              : ((0x13U 
-                                                  == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                  ? 
-                                                 (0xffffe000U 
-                                                  | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                     >> 0x13U))
-                                                  : 
-                                                 ((0x14U 
-                                                   == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                   ? 
-                                                  (0xfffff000U 
-                                                   | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                      >> 0x14U))
-                                                   : 
-                                                  ((0x15U 
-                                                    == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                    ? 
-                                                   (0xfffff800U 
-                                                    | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                       >> 0x15U))
-                                                    : 
-                                                   ((0x16U 
-                                                     == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                     ? 
-                                                    (0xfffffc00U 
-                                                     | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                        >> 0x16U))
-                                                     : 
-                                                    (0xfffffe00U 
-                                                     | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                        >> 0x17U)))))))))
-                                  : (((((((((0x18U 
-                                             == vlSelf->top__DOT__singlecycle__DOT__operand_b) 
-                                            | (0x19U 
-                                               == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                           | (0x1aU 
-                                              == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                          | (0x1bU 
-                                             == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                         | (0x1cU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                        | (0x1dU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                       | (0x1eU == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                      | (0x1fU == vlSelf->top__DOT__singlecycle__DOT__operand_b))
-                                      ? ((0x18U == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                          ? (0xffffff00U 
+                                          : (0xffff0000U 
                                              | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                >> 0x18U))
-                                          : ((0x19U 
-                                              == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                              ? (0xffffff80U 
-                                                 | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                    >> 0x19U))
-                                              : ((0x1aU 
-                                                  == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                  ? 
-                                                 (0xffffffc0U 
-                                                  | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                     >> 0x1aU))
-                                                  : 
-                                                 ((0x1bU 
-                                                   == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                   ? 
-                                                  (0xffffffe0U 
-                                                   | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                      >> 0x1bU))
-                                                   : 
-                                                  ((0x1cU 
-                                                    == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                    ? 
-                                                   (0xfffffff0U 
-                                                    | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                       >> 0x1cU))
-                                                    : 
-                                                   ((0x1dU 
-                                                     == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                     ? 
-                                                    (0xfffffff8U 
-                                                     | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                        >> 0x1dU))
-                                                     : 
-                                                    ((0x1eU 
-                                                      == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                      ? 
-                                                     (0xfffffffcU 
-                                                      | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                         >> 0x1eU))
-                                                      : 
-                                                     (0xfffffffeU 
-                                                      | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                         >> 0x1fU)))))))))
-                                      : 0U)))) : ((
-                                                   (((((((0U 
-                                                          == vlSelf->top__DOT__singlecycle__DOT__operand_b) 
-                                                         | (1U 
-                                                            == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                        | (2U 
-                                                           == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                       | (3U 
-                                                          == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                      | (4U 
-                                                         == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                     | (5U 
-                                                        == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                    | (6U 
-                                                       == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                   | (7U 
-                                                      == vlSelf->top__DOT__singlecycle__DOT__operand_b))
-                                                   ? 
-                                                  ((0U 
-                                                    == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                    ? vlSelf->top__DOT__singlecycle__DOT__operand_a
-                                                    : 
-                                                   ((1U 
-                                                     == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                     ? 
-                                                    (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                     >> 1U)
-                                                     : 
-                                                    ((2U 
-                                                      == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                      ? 
-                                                     (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                      >> 2U)
-                                                      : 
-                                                     ((3U 
-                                                       == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                       ? 
-                                                      (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                       >> 3U)
-                                                       : 
-                                                      ((4U 
-                                                        == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                        ? 
-                                                       (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                        >> 4U)
-                                                        : 
-                                                       ((5U 
-                                                         == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                         ? 
-                                                        (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                         >> 5U)
-                                                         : 
-                                                        ((6U 
-                                                          == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                          ? 
-                                                         (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                          >> 6U)
-                                                          : 
-                                                         (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                          >> 7U))))))))
-                                                   : 
-                                                  (((((((((8U 
-                                                           == vlSelf->top__DOT__singlecycle__DOT__operand_b) 
-                                                          | (9U 
-                                                             == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                         | (0xaU 
-                                                            == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                        | (0xbU 
-                                                           == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                       | (0xcU 
-                                                          == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                      | (0xdU 
-                                                         == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                     | (0xeU 
-                                                        == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                    | (0xfU 
-                                                       == vlSelf->top__DOT__singlecycle__DOT__operand_b))
-                                                    ? 
-                                                   ((8U 
-                                                     == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                     ? 
-                                                    (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                     >> 8U)
-                                                     : 
-                                                    ((9U 
-                                                      == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                      ? 
-                                                     (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                      >> 9U)
-                                                      : 
-                                                     ((0xaU 
-                                                       == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                       ? 
-                                                      (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                       >> 0xaU)
-                                                       : 
-                                                      ((0xbU 
-                                                        == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                        ? 
-                                                       (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                        >> 0xbU)
-                                                        : 
-                                                       ((0xcU 
-                                                         == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                         ? 
-                                                        (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                         >> 0xcU)
-                                                         : 
-                                                        ((0xdU 
-                                                          == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                          ? 
-                                                         (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                          >> 0xdU)
-                                                          : 
-                                                         ((0xeU 
-                                                           == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                           ? 
-                                                          (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                           >> 0xeU)
-                                                           : 
-                                                          (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                           >> 0xfU))))))))
-                                                    : 
-                                                   (((((((((0x10U 
-                                                            == vlSelf->top__DOT__singlecycle__DOT__operand_b) 
-                                                           | (0x11U 
-                                                              == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                          | (0x12U 
-                                                             == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                         | (0x13U 
-                                                            == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                        | (0x14U 
-                                                           == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                       | (0x15U 
-                                                          == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                      | (0x16U 
-                                                         == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                     | (0x17U 
-                                                        == vlSelf->top__DOT__singlecycle__DOT__operand_b))
-                                                     ? 
-                                                    ((0x10U 
-                                                      == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                      ? 
-                                                     (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                      >> 0x10U)
-                                                      : 
-                                                     ((0x11U 
-                                                       == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                       ? 
-                                                      (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                       >> 0x11U)
-                                                       : 
-                                                      ((0x12U 
-                                                        == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                        ? 
-                                                       (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                        >> 0x12U)
-                                                        : 
-                                                       ((0x13U 
-                                                         == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                         ? 
-                                                        (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                         >> 0x13U)
-                                                         : 
-                                                        ((0x14U 
-                                                          == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                          ? 
-                                                         (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                          >> 0x14U)
-                                                          : 
-                                                         ((0x15U 
-                                                           == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                           ? 
-                                                          (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                           >> 0x15U)
-                                                           : 
-                                                          ((0x16U 
-                                                            == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                            ? 
-                                                           (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                            >> 0x16U)
-                                                            : 
-                                                           (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                            >> 0x17U))))))))
-                                                     : 
-                                                    (((((((((0x18U 
-                                                             == vlSelf->top__DOT__singlecycle__DOT__operand_b) 
-                                                            | (0x19U 
-                                                               == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                           | (0x1aU 
-                                                              == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                          | (0x1bU 
-                                                             == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                         | (0x1cU 
-                                                            == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                        | (0x1dU 
-                                                           == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                       | (0x1eU 
-                                                          == vlSelf->top__DOT__singlecycle__DOT__operand_b)) 
-                                                      | (0x1fU 
-                                                         == vlSelf->top__DOT__singlecycle__DOT__operand_b))
-                                                      ? 
-                                                     ((0x18U 
-                                                       == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                       ? 
-                                                      (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                       >> 0x18U)
-                                                       : 
-                                                      ((0x19U 
-                                                        == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                        ? 
-                                                       (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                        >> 0x19U)
-                                                        : 
-                                                       ((0x1aU 
-                                                         == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                         ? 
-                                                        (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                         >> 0x1aU)
-                                                         : 
-                                                        ((0x1bU 
-                                                          == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                          ? 
-                                                         (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                          >> 0x1bU)
-                                                          : 
-                                                         ((0x1cU 
-                                                           == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                           ? 
-                                                          (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                           >> 0x1cU)
-                                                           : 
-                                                          ((0x1dU 
-                                                            == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                            ? 
-                                                           (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                            >> 0x1dU)
-                                                            : 
-                                                           ((0x1eU 
-                                                             == vlSelf->top__DOT__singlecycle__DOT__operand_b)
-                                                             ? 
-                                                            (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                             >> 0x1eU)
-                                                             : 
-                                                            (vlSelf->top__DOT__singlecycle__DOT__operand_a 
-                                                             >> 0x1fU))))))))
-                                                      : 0U)))));
+                                                >> 0x10U))))))
+                          : ((8U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                              ? ((4U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                  ? ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                      ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                          ? (0xfffe0000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0xfU))
+                                          : (0xfffc0000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0xeU)))
+                                      : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                          ? (0xfff80000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0xdU))
+                                          : (0xfff00000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0xcU))))
+                                  : ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                      ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                          ? (0xffe00000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0xbU))
+                                          : (0xffc00000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0xaU)))
+                                      : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                          ? (0xff800000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 9U))
+                                          : (0xff000000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 8U)))))
+                              : ((4U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                  ? ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                      ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                          ? (0xfe000000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 7U))
+                                          : (0xfc000000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 6U)))
+                                      : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                          ? (0xf8000000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 5U))
+                                          : (0xf0000000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 4U))))
+                                  : ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                      ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                          ? (0xe0000000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 3U))
+                                          : (0xc0000000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 2U)))
+                                      : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                          ? (0x80000000U 
+                                             | (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 1U))
+                                          : vlSelf->top__DOT__singlecycle__DOT__operand_a)))))
+            : ((0x10U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                ? ((8U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                    ? ((4U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                        ? ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                            ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 0x1fU) : (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x1eU))
+                            : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 0x1dU) : (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x1cU)))
+                        : ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                            ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 0x1bU) : (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x1aU))
+                            : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 0x19U) : (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x18U))))
+                    : ((4U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                        ? ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                            ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 0x17U) : (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x16U))
+                            : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 0x15U) : (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x14U)))
+                        : ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                            ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 0x13U) : (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x12U))
+                            : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 0x11U) : (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                                >> 0x10U)))))
+                : ((8U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                    ? ((4U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                        ? ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                            ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 0xfU) : (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                               >> 0xeU))
+                            : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 0xdU) : (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                               >> 0xcU)))
+                        : ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                            ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 0xbU) : (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                               >> 0xaU))
+                            : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 9U) : (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                             >> 8U))))
+                    : ((4U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                        ? ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                            ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 7U) : (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                             >> 6U))
+                            : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 5U) : (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                             >> 4U)))
+                        : ((2U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                            ? ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 3U) : (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                             >> 2U))
+                            : ((1U & vlSelf->top__DOT__singlecycle__DOT__operand_b)
+                                ? (vlSelf->top__DOT__singlecycle__DOT__operand_a 
+                                   >> 1U) : vlSelf->top__DOT__singlecycle__DOT__operand_a))))));
     vlSelf->top__DOT__singlecycle__DOT__alu__DOT__sltu__DOT__sum 
         = ((0xfffffffeU & vlSelf->top__DOT__singlecycle__DOT__alu__DOT__sltu__DOT__sum) 
            | (1U & (~ (vlSelf->top__DOT__singlecycle__DOT__operand_a 
@@ -4102,11 +4172,12 @@ VL_INLINE_OPT void Vtop___024root___combo__TOP__0(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__singlecycle__DOT__alu_data = 
         ((8U & (IData)(vlSelf->top__DOT__singlecycle__DOT__alu_op))
           ? ((4U & (IData)(vlSelf->top__DOT__singlecycle__DOT__alu_op))
-              ? 0xffffffffU : ((2U & (IData)(vlSelf->top__DOT__singlecycle__DOT__alu_op))
-                                ? 0xffffffffU : ((1U 
-                                                  & (IData)(vlSelf->top__DOT__singlecycle__DOT__alu_op))
-                                                  ? vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_arithmetic_result
-                                                  : vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result)))
+              ? vlSelf->top__DOT__singlecycle__DOT__operand_b
+              : ((2U & (IData)(vlSelf->top__DOT__singlecycle__DOT__alu_op))
+                  ? vlSelf->top__DOT__singlecycle__DOT__operand_b
+                  : ((1U & (IData)(vlSelf->top__DOT__singlecycle__DOT__alu_op))
+                      ? vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_arithmetic_result
+                      : vlSelf->top__DOT__singlecycle__DOT__alu__DOT__shift_right_result)))
           : ((4U & (IData)(vlSelf->top__DOT__singlecycle__DOT__alu_op))
               ? ((2U & (IData)(vlSelf->top__DOT__singlecycle__DOT__alu_op))
                   ? ((1U & (IData)(vlSelf->top__DOT__singlecycle__DOT__alu_op))
@@ -4157,13 +4228,22 @@ void Vtop___024root___eval(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval\n"); );
     // Body
-    if ((((IData)(vlSelf->i_clk) & (~ (IData)(vlSelf->__Vclklast__TOP__i_clk))) 
+    if ((((~ (IData)(vlSelf->i_clk)) & (IData)(vlSelf->__Vclklast__TOP__i_clk)) 
          | ((~ (IData)(vlSelf->i_rst_n)) & (IData)(vlSelf->__Vclklast__TOP__i_rst_n)))) {
         Vtop___024root___sequent__TOP__0(vlSelf);
+    }
+    if ((((IData)(vlSelf->i_clk) & (~ (IData)(vlSelf->__Vclklast__TOP__i_clk))) 
+         | ((~ (IData)(vlSelf->i_rst_n)) & (IData)(vlSelf->__Vclklast__TOP__i_rst_n)))) {
+        Vtop___024root___sequent__TOP__1(vlSelf);
         vlSelf->__Vm_traceActivity[1U] = 1U;
     }
+    if ((((~ (IData)(vlSelf->i_clk)) & (IData)(vlSelf->__Vclklast__TOP__i_clk)) 
+         | ((~ (IData)(vlSelf->i_rst_n)) & (IData)(vlSelf->__Vclklast__TOP__i_rst_n)))) {
+        Vtop___024root___sequent__TOP__2(vlSelf);
+        vlSelf->__Vm_traceActivity[2U] = 1U;
+    }
     Vtop___024root___combo__TOP__0(vlSelf);
-    vlSelf->__Vm_traceActivity[2U] = 1U;
+    vlSelf->__Vm_traceActivity[3U] = 1U;
     // Final
     vlSelf->__Vclklast__TOP__i_clk = vlSelf->i_clk;
     vlSelf->__Vclklast__TOP__i_rst_n = vlSelf->i_rst_n;
@@ -4218,7 +4298,5 @@ void Vtop___024root___eval_debug_assertions(Vtop___024root* vlSelf) {
         Verilated::overWidthError("i_rst_n");}
     if (VL_UNLIKELY((vlSelf->i_io_btn & 0xf0U))) {
         Verilated::overWidthError("i_io_btn");}
-    if (VL_UNLIKELY((vlSelf->__pinNumber9 & 0xfeU))) {
-        Verilated::overWidthError("__pinNumber9");}
 }
 #endif  // VL_DEBUG

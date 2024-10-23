@@ -5,6 +5,7 @@ module singlecycle (
     input logic [3:0] i_io_btn,
 
     output logic o_insn_vld,
+    output logic [31:0] o_pc_debug,
     output logic [31:0] o_io_lcd,
     output logic [31:0] o_io_ledg,
     output logic [31:0] o_io_ledr
@@ -28,6 +29,7 @@ wire mem_wren;
 wire [31:0] ld_data;
 wire [1:0] wb_sel;
 
+assign o_pc_debug = pc;
 
 mux2to1 mux1(
     .sel(pc_sel),
@@ -108,6 +110,7 @@ lsu lsu(
     .i_lsu_wren(mem_wren),
     .i_io_sw(i_io_sw),
     .i_io_btn(i_io_btn),
+    .instr(instr),
     .o_ld_data(ld_data),
     .o_io_lcd(o_io_lcd),
     .o_io_ledg(o_io_ledg),

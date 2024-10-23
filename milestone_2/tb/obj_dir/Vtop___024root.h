@@ -17,7 +17,6 @@ class Vtop___024root final : public VerilatedModule {
     VL_IN8(i_rst_n,0,0);
     VL_IN8(i_io_btn,3,0);
     VL_OUT8(o_insn_vld,0,0);
-    VL_IN8(__pinNumber9,0,0);
     CData/*0:0*/ top__DOT__singlecycle__DOT__pc_sel;
     CData/*0:0*/ top__DOT__singlecycle__DOT__rd_wren;
     CData/*0:0*/ top__DOT__singlecycle__DOT__br_un;
@@ -28,9 +27,12 @@ class Vtop___024root final : public VerilatedModule {
     CData/*3:0*/ top__DOT__singlecycle__DOT__alu_op;
     CData/*0:0*/ top__DOT__singlecycle__DOT__mem_wren;
     CData/*1:0*/ top__DOT__singlecycle__DOT__wb_sel;
+    CData/*0:0*/ __Vdlyvset__top__DOT__singlecycle__DOT__lsu__DOT__data_mem__v0;
     CData/*0:0*/ __Vclklast__TOP__i_clk;
     CData/*0:0*/ __Vclklast__TOP__i_rst_n;
+    SData/*12:0*/ __Vdlyvdim0__top__DOT__singlecycle__DOT__lsu__DOT__data_mem__v0;
     VL_IN(i_io_sw,31,0);
+    VL_OUT(o_pc_debug,31,0);
     VL_OUT(o_io_lcd,31,0);
     VL_OUT(o_io_ledg,31,0);
     VL_OUT(o_io_ledr,31,0);
@@ -58,13 +60,18 @@ class Vtop___024root final : public VerilatedModule {
     IData/*31:0*/ top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg;
     IData/*31:0*/ top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg;
     IData/*31:0*/ top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg;
+    IData/*31:0*/ __Vdly__top__DOT__singlecycle__DOT__lsu__DOT__led_r_reg;
+    IData/*31:0*/ __Vdly__top__DOT__singlecycle__DOT__lsu__DOT__led_g_reg;
+    IData/*31:0*/ __Vdly__top__DOT__singlecycle__DOT__lsu__DOT__lcd_reg;
+    IData/*31:0*/ __Vdlyvval__top__DOT__singlecycle__DOT__lsu__DOT__data_mem__v0;
     IData/*31:0*/ __Vchglast__TOP__top__DOT__singlecycle__DOT__brc__DOT__full_adder_unsigned__DOT__c;
     IData/*31:0*/ __Vchglast__TOP__top__DOT__singlecycle__DOT__alu__DOT__slt__DOT__full_adder_unsigned__DOT__c;
     IData/*31:0*/ __Vchglast__TOP__top__DOT__singlecycle__DOT__alu__DOT__slt__DOT__full_adder_signed__DOT__c;
     IData/*31:0*/ __Vchglast__TOP__top__DOT__singlecycle__DOT__alu__DOT__sltu__DOT__full_adder_unsigned__DOT__c;
     VlUnpacked<IData/*31:0*/, 2048> top__DOT__singlecycle__DOT__imem__DOT__mem;
     VlUnpacked<IData/*31:0*/, 32> top__DOT__singlecycle__DOT__regfile__DOT__register;
-    VlUnpacked<CData/*0:0*/, 3> __Vm_traceActivity;
+    VlUnpacked<IData/*31:0*/, 8192> top__DOT__singlecycle__DOT__lsu__DOT__data_mem;
+    VlUnpacked<CData/*0:0*/, 4> __Vm_traceActivity;
 
     // INTERNAL VARIABLES
     Vtop__Syms* const vlSymsp;

@@ -128,7 +128,7 @@ always_comb begin
             mem_wren = 1'b0;
             opa_sel = 1'b0;
             opb_sel = 1'b1;
-            alu_op = 4'b0000;
+            alu_op = 4'b1111;
             br_un = 1'b0;
             wb_sel = 2'b00;
             o_insn_vld = 1'b1;

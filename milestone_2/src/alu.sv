@@ -21,9 +21,9 @@ wire [31:0] shift_left_result, shift_right_result, shift_right_arithmetic_result
 
 slt slt (i_operand_a, i_operand_b, slt_result);
 sltu sltu (i_operand_a, i_operand_b, sltu_result);
-shift_left shift_left (i_operand_a, i_operand_b, shift_left_result);
-shift_right shift_right (i_operand_a, i_operand_b, shift_right_result);
-shift_right_arithmetic shift_right_arithmetic(i_operand_a, i_operand_b, shift_right_arithmetic_result);
+shift_left shift_left (i_operand_a, i_operand_b[4:0], shift_left_result);
+shift_right shift_right (i_operand_a, i_operand_b[4:0], shift_right_result);
+shift_right_arithmetic shift_right_arithmetic(i_operand_a, i_operand_b[4:0], shift_right_arithmetic_result);
 
 always_comb begin: alu_operation
     case(i_alu_op)
@@ -37,7 +37,7 @@ always_comb begin: alu_operation
         SLL: o_alu_data = shift_left_result;
         SRL: o_alu_data = shift_right_result;
         SRA: o_alu_data = shift_right_arithmetic_result;
-        default: o_alu_data = 'hFFFFFFFF;
+        default: o_alu_data = i_operand_b;
     endcase
 end
 endmodule

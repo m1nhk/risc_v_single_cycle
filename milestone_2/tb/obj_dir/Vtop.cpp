@@ -15,8 +15,8 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , i_rst_n{vlSymsp->TOP.i_rst_n}
     , i_io_btn{vlSymsp->TOP.i_io_btn}
     , o_insn_vld{vlSymsp->TOP.o_insn_vld}
-    , __pinNumber9{vlSymsp->TOP.__pinNumber9}
     , i_io_sw{vlSymsp->TOP.i_io_sw}
+    , o_pc_debug{vlSymsp->TOP.o_pc_debug}
     , o_io_lcd{vlSymsp->TOP.o_io_lcd}
     , o_io_ledg{vlSymsp->TOP.o_io_ledg}
     , o_io_ledr{vlSymsp->TOP.o_io_ledr}
@@ -68,7 +68,7 @@ static void _eval_initial_loop(Vtop__Syms* __restrict vlSymsp) {
             Verilated::debug(1);
             __Vchange = Vtop___024root___change_request(&(vlSymsp->TOP));
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("top.sv", 3, "",
+            VL_FATAL_MT("top.sv", 2, "",
                 "Verilated model didn't DC converge\n"
                 "- See https://verilator.org/warn/DIDNOTCONVERGE");
         } else {
@@ -99,7 +99,7 @@ void Vtop::eval_step() {
             Verilated::debug(1);
             __Vchange = Vtop___024root___change_request(&(vlSymsp->TOP));
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("top.sv", 3, "",
+            VL_FATAL_MT("top.sv", 2, "",
                 "Verilated model didn't converge\n"
                 "- See https://verilator.org/warn/DIDNOTCONVERGE");
         } else {

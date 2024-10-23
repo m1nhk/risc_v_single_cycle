@@ -9,7 +9,7 @@
 #include "Vtop.h"
 #include "driver.cpp"
 
-#define MAX_SIM       1000
+#define MAX_SIM       2000
 vluint64_t sim_unit = 0;
 vluint64_t sim_time = 0;
 
